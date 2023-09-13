@@ -1,42 +1,61 @@
-body::-webkit-scrollbar{
-    display: none;
-  }
-
-
-.wrapper {
-    max-width: 96%;
-    margin: 0 auto;
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+.slider {
+    margin: 10px;
     background-color: grey;
-    padding: 30px;
+    padding: 40px;
 }
-
-.window {
+.wrapper {
+    overflow: hidden;
     display: flex;
-    aspect-ratio: 16/9;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    border-radius: 5px;
-    scrollbar-width: none;
+    flex-wrap: wrap-reverse;
+    flex-direction: row-reverse;
 }
-figure {
-    flex: 1 0 100%;
-    
-    scroll-snap-align: start;
+.slides {
+    display: flex;
+    transition: margin-right 1s;
+    margin-bottom: 50px;
+}
+.slide-title {
+    display: none;
+    opacity: 0;
+    flex-grow: 1;
+    transition: opacity 2s;
 }
 img {
-    flex: 1 0 100%;
-    
+    width: calc(100vw - 100px);
 }
 .slide-button {
-    float: right;
+    flex-grow: 0;
     margin: 0 5px;
 }
-figcaption {
-    
-    color: red;
-    font-size: 30px;
+#button1:checked ~ .slides {
+    margin-right: calc((-3)*(100vw - 100px));
 }
-#xxx {
-    display: block;
+#button1:checked ~ #title1 {
+    display: inline;
+    opacity: 1;
+}
+#button2:checked ~ .slides {
+    margin-right: calc((-2)*(100vw - 100px));
+}
+#button2:checked ~ #title2 {
+    display: inline;
+    opacity: 1;
+}
+#button3:checked ~ .slides {
+    margin-right: calc((-1)*(100vw - 100px));
+}
+#button3:checked ~ #title3 {
+    display: inline;
+    opacity: 1;
+}
+#button4:checked ~ .slides {
+    margin-left: 0;
+}
+#button4:checked ~ #title4 {
+    display: inline;
+    opacity: 1;
 }
