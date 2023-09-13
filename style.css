@@ -1,0 +1,42 @@
+body::-webkit-scrollbar{
+    display: none;
+  }
+
+
+.wrapper {
+    max-width: 96%;
+    margin: 0 auto;
+    background-color: grey;
+    padding: 30px;
+}
+
+.window {
+    display: flex;
+    aspect-ratio: 16/9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    border-radius: 5px;
+    scrollbar-width: none;
+}
+figure {
+    flex: 1 0 100%;
+    
+    scroll-snap-align: start;
+}
+img {
+    flex: 1 0 100%;
+    
+}
+.slide-button {
+    float: right;
+    margin: 0 5px;
+}
+figcaption {
+    
+    color: red;
+    font-size: 30px;
+}
+#xxx {
+    display: block;
+}
