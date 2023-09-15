@@ -1,11 +1,14 @@
+html {
+    font-size: 20px;
+}
 body {
     margin: 0;
     box-sizing: border-box;
 }
 .slider {
-    margin: 10px;
+    margin: 0 0.5rem;
     background-color: grey;
-    padding: 40px;
+    padding: 0.5rem 2rem 2rem;
 }
 .wrapper {
     overflow: hidden;
@@ -20,10 +23,10 @@ body {
 .slides {
     display: flex;
     transition: margin-right 1s;
-    margin-bottom: 50px;
+    margin-bottom: 1rem;
 }
 img {
-    width: calc(100vw - 100px);
+    width: calc(100vw - 5rem);
 }
 .slide-title {
     flex-grow: 0;
@@ -33,45 +36,41 @@ img {
     font-size: 0px;
 }
 /*buttons handle*/
-.slide-button {
-    flex-grow: 0;
-    margin: 0 5px;
-}
 #button1:checked ~ #title1 {
     display: inline-block;
-    width: 200px;
+    width: 10rem;
     flex-grow: 1;
-    font-size: 20px;
+    font-size: 1rem;
     transition: width 1s, font-size 1s;
 }
 #button1:checked ~ .slides {
-    margin-right: calc((-3)*(100vw - 100px));
+    margin-right: calc((-3)*(100vw - 5rem));
 }
 #button2:checked ~ #title2 {
     display: inline-block;
-    width: 200px;
+    width: 10rem;
     flex-grow: 1;
-    font-size: 20px;
+    font-size: 1rem;
     transition: width 1s, font-size 1s;
 }
 #button2:checked ~ .slides {
-    margin-right: calc((-2)*(100vw - 100px));
+    margin-right: calc((-2)*(100vw - 5rem));
 }
 #button3:checked ~ #title3 {
     display: inline-block;
-    width: 200px;
+    width: 10rem;
     flex-grow: 1;
-    font-size: 20px;
+    font-size: 1rem;
     transition: width 1s, font-size 1s;
 }
 #button3:checked ~ .slides {
-    margin-right: calc((-1)*(100vw - 100px));
+    margin-right: calc((-1)*(100vw - 5rem));
 }
 #button4:checked ~ #title4 {
     display: inline-block;
-    width: 200px;
+    width: 10rem;
     flex-grow: 1;
-    font-size: 20px;
+    font-size: 1rem;
     transition: width 1s, font-size 1s;
 }
 #button4:checked ~ .slides {
@@ -83,7 +82,7 @@ img {
   }
   label {
     cursor: pointer;
-    padding: 5px 5px 2px;
+    padding: 0.25rem 0.25rem 0.01rem;
   }
   input:checked + label {
     background-color: green;
@@ -91,10 +90,13 @@ img {
   label:hover {
     background-color: white;
   }
+  label:active {
+    background-color: rgb(15, 138, 168);
+  }
   .square {
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 1rem;
+    height: 1rem;
     background-color: greenyellow;
   }
   @media (max-width: 768px) {
@@ -122,7 +124,7 @@ img {
     }
     #label4 {
         order: 2;
-        margin-right: calc(0.5*(100vw - 100px - 120px));
+        margin-right: calc(0.5*(100vw - 5rem - 6rem));
     }
     .titles {
         order: 1;
@@ -131,29 +133,29 @@ img {
     }
     .slide-title-mobile {
         display: inline-block;
-        font-size: 16px;
+        font-size: 0.8rem;
         color: white;
         font-weight: 700;
-        width: calc(100vw - 100px);
-        margin-top: 30px;
+        width: calc(100vw - 5rem);
+        margin-top: 1.5rem;
     }
     #button1m:checked ~ .slides {
-        margin-right: calc((-3)*(100vw - 100px));
+        margin-right: calc((-3)*(100vw - 5rem));
     }
     #button1m:checked ~ .titles {
-        margin-right: calc((-3)*(100vw - 100px));
+        margin-right: calc((-3)*(100vw - 5rem));
     }
     #button2m:checked ~ .slides {
-        margin-right: calc((-2)*(100vw - 100px));
+        margin-right: calc((-2)*(100vw - 5rem));
     }
     #button2m:checked ~ .titles {
-        margin-right: calc((-2)*(100vw - 100px));
+        margin-right: calc((-2)*(100vw - 5rem));
     }
     #button3m:checked ~ .slides {
-        margin-right: calc((-1)*(100vw - 100px));
+        margin-right: calc((-1)*(100vw - 5rem));
     }
     #button3m:checked ~ .titles {
-        margin-right: calc((-1)*(100vw - 100px));
+        margin-right: calc((-1)*(100vw - 5rem));
     }
     #button4m:checked ~ .slides {
         margin-left: 0;
