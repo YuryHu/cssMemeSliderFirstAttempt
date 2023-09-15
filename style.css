@@ -14,6 +14,9 @@ body {
     flex-direction: row-reverse;
     align-items: center;
 }
+.wrapper-mobile {
+    display: none;
+}
 .slides {
     display: flex;
     transition: margin-right 1s;
@@ -38,7 +41,7 @@ img {
     display: inline-block;
     width: 200px;
     flex-grow: 1;
-    font-size: 16px;
+    font-size: 20px;
     transition: width 1s, font-size 1s;
 }
 #button1:checked ~ .slides {
@@ -48,7 +51,7 @@ img {
     display: inline-block;
     width: 200px;
     flex-grow: 1;
-    font-size: 16px;
+    font-size: 20px;
     transition: width 1s, font-size 1s;
 }
 #button2:checked ~ .slides {
@@ -58,7 +61,7 @@ img {
     display: inline-block;
     width: 200px;
     flex-grow: 1;
-    font-size: 16px;
+    font-size: 20px;
     transition: width 1s, font-size 1s;
 }
 #button3:checked ~ .slides {
@@ -68,7 +71,7 @@ img {
     display: inline-block;
     width: 200px;
     flex-grow: 1;
-    font-size: 16px;
+    font-size: 20px;
     transition: width 1s, font-size 1s;
 }
 #button4:checked ~ .slides {
@@ -94,3 +97,68 @@ img {
     height: 20px;
     background-color: greenyellow;
   }
+  @media (max-width: 768px) {
+    .wrapper {
+        display: none;
+    }
+    .wrapper-mobile {
+        overflow: hidden;
+        display: flex;
+        flex-wrap: wrap-reverse;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+    .slides  {
+        order: 6;
+    }
+    #label1 {
+        order: 5;
+    }
+    #label2 {
+        order: 4;
+    }
+    #label3 {
+        order: 3;
+    }
+    #label4 {
+        order: 2;
+        margin-right: calc(0.5*(100vw - 100px - 120px));
+    }
+    .titles {
+        order: 1;
+        display: flex;
+        transition: margin-right 1s;
+    }
+    .slide-title-mobile {
+        display: inline-block;
+        font-size: 16px;
+        color: white;
+        font-weight: 700;
+        width: calc(100vw - 100px);
+        margin-top: 30px;
+    }
+    #button1m:checked ~ .slides {
+        margin-right: calc((-3)*(100vw - 100px));
+    }
+    #button1m:checked ~ .titles {
+        margin-right: calc((-3)*(100vw - 100px));
+    }
+    #button2m:checked ~ .slides {
+        margin-right: calc((-2)*(100vw - 100px));
+    }
+    #button2m:checked ~ .titles {
+        margin-right: calc((-2)*(100vw - 100px));
+    }
+    #button3m:checked ~ .slides {
+        margin-right: calc((-1)*(100vw - 100px));
+    }
+    #button3m:checked ~ .titles {
+        margin-right: calc((-1)*(100vw - 100px));
+    }
+    #button4m:checked ~ .slides {
+        margin-left: 0;
+    }
+    #button4m:checked ~ .titles {
+        margin-left: 0;
+    }
+}
