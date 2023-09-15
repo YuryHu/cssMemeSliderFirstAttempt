@@ -12,87 +12,85 @@ body {
     display: flex;
     flex-wrap: wrap-reverse;
     flex-direction: row-reverse;
+    align-items: center;
 }
 .slides {
     display: flex;
-    transition: margin-right 2s;
+    transition: margin-right 1s;
     margin-bottom: 50px;
 }
 img {
     width: calc(100vw - 100px);
 }
 .slide-title {
-    display: none;
-    flex-grow: 1;
-    transition: opacity 2s;
+    flex-grow: 0;
+    color: white;
+    font-weight: 700;
+    width: 0;
+    font-size: 0px;
 }
-/*buttons*/
+/*buttons handle*/
 .slide-button {
     flex-grow: 0;
     margin: 0 5px;
 }
-#button1:active ~ #title1 {
-    display: inline;
-    opacity: 0;
-}
-#button1:active ~ .non-1 {
-    display: none;
-}
 #button1:checked ~ #title1 {
-    display: inline;
-    opacity: 1;
+    display: inline-block;
+    width: 200px;
+    flex-grow: 1;
+    font-size: 16px;
+    transition: width 1s, font-size 1s;
 }
 #button1:checked ~ .slides {
     margin-right: calc((-3)*(100vw - 100px));
 }
-#button2:active ~ #title2 {
-    display: inline;
-    opacity: 0;
-}
-#button2:active ~ #title1 {
-    display: none;
-}
 #button2:checked ~ #title2 {
-    display: inline;
-    opacity: 1;
+    display: inline-block;
+    width: 200px;
+    flex-grow: 1;
+    font-size: 16px;
+    transition: width 1s, font-size 1s;
 }
 #button2:checked ~ .slides {
     margin-right: calc((-2)*(100vw - 100px));
 }
-#button3:active ~ #title3 {
-    display: inline;
-    opacity: 0;
-}
-#button3:active ~ #title1 {
-    display: none;
-}
-#button3:active ~ #title2 {
-    display: none;
-}
 #button3:checked ~ #title3 {
-    display: inline;
-    opacity: 1;
+    display: inline-block;
+    width: 200px;
+    flex-grow: 1;
+    font-size: 16px;
+    transition: width 1s, font-size 1s;
 }
 #button3:checked ~ .slides {
     margin-right: calc((-1)*(100vw - 100px));
 }
-#button4:active ~ #title4 {
-    display: inline;
-    opacity: 0;
-}
-#button4:active ~ #title1 {
-    display: none;
-}
-#button4:active ~ #title2 {
-    display: none;
-}
-#button4:active ~ #title3 {
-    display: none;
-}
 #button4:checked ~ #title4 {
-    display: inline;
-    opacity: 1;
+    display: inline-block;
+    width: 200px;
+    flex-grow: 1;
+    font-size: 16px;
+    transition: width 1s, font-size 1s;
 }
 #button4:checked ~ .slides {
     margin-left: 0;
 }
+/*buttons style*/
+  input {
+    display: none;
+  }
+  label {
+    cursor: pointer;
+    padding: 5px 5px 2px;
+  }
+  input:checked + label {
+    background-color: green;
+  }
+  label:hover {
+    background-color: white;
+  }
+  .square {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: greenyellow;
+  }
